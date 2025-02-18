@@ -64,10 +64,7 @@ function write(text, pos, r, g, b, a) {
 function clear() {
     c.clearRect(0, 0, window.innerWidth, window.innerHeight)
 }
-function draw() {
-    
-    // drawImg(, new Vector2(0, 0), new Vector2(50, 50), new Vector2(0, 0), new Vector2(100, 100))
-}
+let spinning = false
 function run() {
     clear()
     for (let i of slots) {
@@ -96,9 +93,12 @@ function run() {
 }
 setInterval(run, 1)
 function spin() {
-    spinTick((Math.floor(Math.random()*10) * 33) + 100, 3, 0)
-    spinTick((Math.floor(Math.random()*10) * 33) + 600, 3, 1)
-    spinTick((Math.floor(Math.random()*10) * 33) + 1100, 3, 2)
+    if (!spinning) {
+        spinTick((Math.floor(Math.random()*10) * 33) + 100, 3, 0)
+        spinTick((Math.floor(Math.random()*10) * 33) + 600, 3, 1)
+        spinTick((Math.floor(Math.random()*10) * 33) + 1100, 3, 2)
+        spinning = true
+    }
 }
 function spinTick(t, d, n) {
     slots[n].rotation += d
@@ -109,6 +109,7 @@ function spinTick(t, d, n) {
         score = facts[facts[value]]
         if (n == 2) {
             setTimeout(function() {alert(`You got ${value} for a score of ${score}\n${value} -> ${facts[value]} -> ${score}\nYou get ${score} balls to drop into the plinko!`)}, 100)
+            spinning = false
         }
     }
 }
