@@ -96,9 +96,9 @@ function run() {
 }
 setInterval(run, 1)
 function spin() {
-    spinTick((Math.floor(Math.random()*10) * 33) + 500, 5, 0)
-    spinTick((Math.floor(Math.random()*10) * 33) + 1000, 5, 1)
-    spinTick((Math.floor(Math.random()*10) * 33) + 1500, 5, 2)
+    spinTick((Math.floor(Math.random()*10) * 33) + 0, 3, 0)
+    spinTick((Math.floor(Math.random()*10) * 33) + 500, 3, 1)
+    spinTick((Math.floor(Math.random()*10) * 33) + 1000, 3, 2)
 }
 function spinTick(t, d, n) {
     slots[n].rotation += d
