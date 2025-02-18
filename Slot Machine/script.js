@@ -96,9 +96,9 @@ function run() {
 }
 setInterval(run, 1)
 function spin() {
-    spinTick((Math.floor(Math.random()*10) * 33) + 500, 3, 0)
-    spinTick((Math.floor(Math.random()*10) * 33) + 1000, 3, 1)
-    spinTick((Math.floor(Math.random()*10) * 33) + 1500, 3, 2)
+    spinTick((Math.floor(Math.random()*10) * 33) + 500, 5, 0)
+    spinTick((Math.floor(Math.random()*10) * 33) + 1000, 5, 1)
+    spinTick((Math.floor(Math.random()*10) * 33) + 1500, 5, 2)
 }
 function spinTick(t, d, n) {
     slots[n].rotation += d
@@ -122,7 +122,7 @@ let slots = [
     new Slot(50),
     new Slot(50)
 ]
-spin()
+//spin()
 function numOfFact(n) {
     let final = 0
     for (let i = 1; i <= n; i++) {
@@ -138,3 +138,4 @@ for (let i = 0; i < 1000; i++) {
 }
 let value = 0
 let score = 0
+document.addEventListener('click', function(event) {spin()})
