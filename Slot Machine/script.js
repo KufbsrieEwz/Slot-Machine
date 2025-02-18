@@ -108,7 +108,7 @@ function spinTick(t, d, n) {
         value += Math.floor(slots[n].rotation/100) * (10**(2-n))
         score = facts[facts[value]]
         if (n == 2) {
-            setTimeout(function() {alert(`You got ${value} for a score of ${score}\n${value} -> ${facts[value]} -> ${score}`)}, 100)
+            setTimeout(function() {alert(`You got ${value} for a score of ${score}\n${value} -> ${facts[value]} -> ${score}\nYou get ${score} balls to drop into the plinko!`)}, 100)
         }
     }
 }
