@@ -1,4 +1,3 @@
-console.log('e')
 let canvas = document.getElementById('canvas')
 let c = canvas.getContext('2d')
 canvas.width = window.innerWidth
@@ -97,9 +96,9 @@ function run() {
 }
 setInterval(run, 1)
 function spin() {
-    spinTick((Math.floor(Math.random()*10) * 33) + 0, 3, 0)
-    spinTick((Math.floor(Math.random()*10) * 33) + 500, 3, 1)
-    spinTick((Math.floor(Math.random()*10) * 33) + 1000, 3, 2)
+    spinTick((Math.floor(Math.random()*10) * 33) + 100, 3, 0)
+    spinTick((Math.floor(Math.random()*10) * 33) + 600, 3, 1)
+    spinTick((Math.floor(Math.random()*10) * 33) + 1100, 3, 2)
 }
 function spinTick(t, d, n) {
     slots[n].rotation += d
