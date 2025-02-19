@@ -80,7 +80,7 @@ function run() {
     img[0].src = `Images/${Math.floor(slots[0].rotation/100)}.png`
     let height = Math.abs(Math.cos((slots[0].rotation-50) % 100 * Math.PI / 100)) * 500
     let ypos = (((Math.sin(((Math.PI * (slots[0].rotation % 100)) / 100) % Math.PI - (Math.PI / 2)) + 1) / 2) * 300) - height/2 + canvas.height/4
-    drawImg(img[0], new Vector2(0, 0), new Vector2(50, 50), new Vector2(canvas.width/2 - 750, ypos), new Vector2(500, height))
+    drawImg(img[0], new Vector2(0, 0), new Vector2(50, 50), new Vector2(canvas.width/2 - 700, ypos), new Vector2(500, height))
     img[1].src = `Images/${Math.floor(slots[1].rotation/100)}.png`
     height = Math.abs(Math.cos((slots[1].rotation-50) % 100 * Math.PI / 100)) * 500
     ypos = (((Math.sin(((Math.PI * (slots[1].rotation % 100)) / 100) % Math.PI - (Math.PI / 2)) + 1) / 2) * 300) - height/2 + canvas.height/4
@@ -88,7 +88,7 @@ function run() {
     img[2].src = `Images/${Math.floor(slots[2].rotation/100)}.png`
     height = Math.abs(Math.cos((slots[2].rotation-50) % 100 * Math.PI / 100)) * 500
     ypos = (((Math.sin(((Math.PI * (slots[2].rotation % 100)) / 100) % Math.PI - (Math.PI / 2)) + 1) / 2) * 300) - height/2 + canvas.height/4
-    drawImg(img[2], new Vector2(0, 0), new Vector2(50, 50), new Vector2(canvas.width/2 + 250, ypos), new Vector2(500, height))
+    drawImg(img[2], new Vector2(0, 0), new Vector2(50, 50), new Vector2(canvas.width/2 + 200, ypos), new Vector2(500, height))
     //draw
 }
 setInterval(run, 1)
